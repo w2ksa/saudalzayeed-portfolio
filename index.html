@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saud Al Zayed - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Added theme toggle button -->
+    <button class="theme-toggle" id="theme-toggle">
+        <i class="fas fa-sun"></i>
+        <span>Light Mode</span>
+    </button>
+
+    <!-- Header with Language Toggle and CV Download -->
+    <header class="header">
+        <div class="container">
+            <a href="cv/Saud_Al_Zayed_CV.pdf" download="Saud_Al_Zayed_CV.pdf" class="btn btn-outline">
+                <i class="fas fa-download"></i>
+                <span id="cv-text">Download CV</span>
+            </a>
+            <button class="btn btn-outline" id="language-toggle">
+                <i class="fas fa-language"></i>
+                <span id="lang-text">العربية</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container text-center">
+            <h1 id="hero-name">Saud Ali Ahmed Al Zayed</h1>
+            <p class="hero-subtitle" id="hero-subtitle">Full Stack Developer & Cybersecurity Specialist</p>
+            <p class="hero-description" id="hero-description">Computer Science Graduate | Laravel Expert | Security Enthusiast</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section bg-slate-800">
+        <div class="container">
+            <h2 class="section-title" id="about-title">About Me</h2>
+            <div class="card">
+                <p id="about-text">A Computer Science graduate from King Khalid University, specialized in back-end development using languages like Laravel. Passionate about cybersecurity, with strong skills in system development and automation (including building a full Honeypot system). Quick learner, always eager to acquire new skills, with strong problem-solving abilities and the capability to work independently as well as collaboratively in a team.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section bg-slate-900">
+        <div class="container">
+            <h2 class="section-title" id="skills-title">Technical Skills</h2>
+            <!-- Redesigned skills section with three cards and pill-style tags -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Backend Development Card -->
+                <div class="skill-card-new">
+                    <h3 class="skill-card-title" id="backend-title">Backend Development</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag skill-tag-laravel">Laravel</span>
+                        <span class="skill-tag skill-tag-php">PHP</span>
+                        <span class="skill-tag skill-tag-python">Python</span>
+                        <span class="skill-tag skill-tag-mysql">MySQL</span>
+                    </div>
+                </div>
+                
+                <!-- Frontend Development Card -->
+                <div class="skill-card-new">
+                    <h3 class="skill-card-title" id="frontend-title">Frontend Development</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag skill-tag-js">JavaScript</span>
+                        <span class="skill-tag skill-tag-html">HTML/CSS</span>
+                        <span class="skill-tag skill-tag-wordpress">WordPress</span>
+                    </div>
+                </div>
+                
+                <!-- Cybersecurity & Tools Card -->
+                <div class="skill-card-new">
+                    <h3 class="skill-card-title" id="security-title">Cybersecurity & Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag skill-tag-honeypot">Honeypot Systems</span>
+                        <span class="skill-tag skill-tag-git">Git/GitHub</span>
+                        <span class="skill-tag skill-tag-linux">Linux</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="section bg-slate-800">
+        <div class="container">
+            <h2 class="section-title" id="education-title">Education</h2>
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-graduation-cap icon"></i>
+                    <div>
+                        <h3 id="university-name">King Khalid University</h3>
+                        <p class="text-muted" id="university-location">Abha, Saudi Arabia</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <p class="font-medium" id="degree">Bachelor of Science in Computer Science</p>
+                    <p class="text-muted" id="graduation">Graduated: May 2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recommendation Section -->
+    <section class="section bg-slate-900">
+        <div class="container">
+            <h2 class="section-title" id="recommendation-title">Recommendation</h2>
+            <div class="card recommendation-card">
+                <p class="italic" id="recommendation-text">The Deanship of E-Services at King Khalid University certifies that Saud Ali Ahmed Al Zayed Asiri has successfully completed a cooperative training program lasting six weeks, totaling 180 training hours. During this period, he demonstrated high levels of commitment, discipline, good conduct, and proficiency in task performance, along with excellent teamwork spirit. The Deanship wishes him continued success in his professional career.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiences Section -->
+    <section class="section bg-slate-800">
+        <div class="container">
+            <h2 class="section-title" id="experiences-title">Experiences, Experiments and Projects</h2>
+            
+            <!-- Work Experience -->
+            <div class="card mb-6">
+                <div class="card-header">
+                    <i class="fas fa-briefcase icon"></i>
+                    <div>
+                        <h3 id="job-title">Cooperative Trainee – Deanship of E-Services</h3>
+                        <p class="text-muted" id="job-company">King Khalid University, Abha</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <div class="date-info">
+                        <i class="fas fa-calendar icon-small"></i>
+                        <span id="job-period">09-02-2025 to 27-03-2025</span>
+                    </div>
+                    <ul id="job-tasks">
+                        <li>Contributing to the development and improvement of the university's electronic systems and services</li>
+                        <li>Executing assigned tasks accurately within set timeframes while maintaining quality standards</li>
+                        <li>Collaborating with the team to analyze technical issues and provide appropriate solutions</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Honeypot Project -->
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-shield-alt icon"></i>
+                    <div>
+                        <h3 id="project-title">Honeypot Cybersecurity System – Graduation Project</h3>
+                        <p class="text-muted" id="project-tech">Python, MySQL, Network Analysis Tools</p>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <p id="project-description">Developed a full-stack cybersecurity system using Python, MySQL, and packet sniffing tools, with backend scripting, data handling, and log automation.</p>
+                    <ul id="project-features">
+                        <li>Demonstrates practical application of programming, database integration, and network-level monitoring</li>
+                        <li>Simulates real-world cyber attacks and monitors unauthorized access</li>
+                        <li>Logs attacker behavior and generates automated security reports for incident analysis</li>
+                    </ul>
+                    <a href="https://github.com/Abdulaziz-Assiri/High-Interaction-Honeypot-System" target="_blank" class="btn btn-outline">
+                        <i class="fab fa-github"></i>
+                        <span id="view-code">View Code</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="section bg-slate-900">
+        <div class="container">
+            <h2 class="section-title" id="certifications-title">Certifications & Courses</h2>
+            <div class="certifications-grid">
+                <div class="cert-card">
+                    <i class="fas fa-award icon-small"></i>
+                    <h3 id="cert1-title">Laravel Certified Senior Developer</h3>
+                    <p class="text-muted" id="cert1-date">May 2025</p>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-award icon-small"></i>
+                    <h3 id="cert2-title">Programming PHP + Laravel + Python</h3>
+                    <p class="text-muted" id="cert2-date">Specialized Courses</p>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-award icon-small"></i>
+                    <h3 id="cert3-title">Full Stack Developer</h3>
+                    <p class="text-muted" id="cert3-date">Great Learning - June 2025</p>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-award icon-small"></i>
+                    <h3 id="cert4-title">Member – Saudi Council of Engineers</h3>
+                    <p class="text-muted" id="cert4-date">Membership No: 1141858 | Valid until: May 2026</p>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-award icon-small"></i>
+                    <h3 id="cert5-title">Introduction to Artificial Intelligence</h3>
+                    <p class="text-muted" id="cert5-date">Edraak Platform</p>
+                </div>
+                <div class="cert-card">
+                    <i class="fas fa-award icon-small"></i>
+                    <h3 id="cert6-title">WordPress Essentials</h3>
+                    <p class="text-muted" id="cert6-date">LinkedIn Learning - July 2025</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Career Vision Section -->
+    <section class="section bg-slate-800">
+        <div class="container">
+            <h2 class="section-title" id="vision-title">Career Vision</h2>
+            <div class="card">
+                <ul id="vision-list">
+                    <li>Interested in building real tech solutions that serve users</li>
+                    <li>I follow the development of modern web technologies like Laravel and interactive user interfaces</li>
+                    <li>Always looking for opportunities to improve my practical experience</li>
+                    <li>I believe that projects are the fastest way to real learning</li>
+                    <li>I aim to work within a motivated tech team to grow my skills and contribute to real projects</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section bg-slate-900">
+        <div class="container text-center">
+            <h2 class="section-title" id="contact-title">Contact Me</h2>
+            <div class="contact-buttons">
+                <a href="https://github.com/w2ksa" target="_blank" class="btn btn-outline">
+                    <i class="fab fa-github"></i>
+                    GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/saud-al-zayed-asiri-292844325" target="_blank" class="btn btn-outline">
+                    <i class="fab fa-linkedin"></i>
+                    LinkedIn
+                </a>
+                <a href="mailto:saudalzayeed@gmail.com" class="btn btn-outline">
+                    <i class="fas fa-envelope"></i>
+                    saudalzayeed@gmail.com
+                </a>
+                <a href="tel:+966558152510" class="btn btn-outline">
+                    <i class="fas fa-phone"></i>
+                    0558152510
+                </a>
+            </div>
+            <p class="location" id="location">Abha, Saudi Arabia</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

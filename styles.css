@@ -1,0 +1,700 @@
+@import url("https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;600;700&family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700&family=Noto+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap");
+
+:root {
+  /* Dark theme - Monochromatic gray palette */
+  --bg-primary: #1f2937;
+  --bg-secondary: #374151;
+  --bg-card: #4b5563;
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db;
+  --text-accent: #9ca3af;
+  --accent-primary: #6b7280;
+  --accent-secondary: #9ca3af;
+  --border-color: #6b7280;
+  --skill-card-border: #bfdbfe;
+  --skill-card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  --skill-card-ring: rgba(59, 130, 246, 0.3);
+}
+
+[data-theme="light"] {
+  /* Updated light theme to white and blue color scheme */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-card: #ffffff;
+  --text-primary: #1e293b;
+  --text-secondary: #475569;
+  --text-accent: #64748b;
+  --accent-primary: #3b82f6;
+  --accent-secondary: #60a5fa;
+  --border-color: #e2e8f0;
+  --skill-card-border: #bfdbfe;
+  --skill-card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  --skill-card-ring: rgba(59, 130, 246, 0.3);
+}
+
+[data-theme="dark"] {
+  --skill-card-border: rgba(16, 185, 129, 0.3);
+  --skill-card-shadow: none;
+  --skill-card-ring: rgba(16, 185, 129, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  transition: all 0.3s ease;
+}
+
+/* Updated Arabic font family to use Saudi-specific fonts */
+body.rtl {
+  font-family: "Tajawal", "Cairo", "Amiri", "Noto Sans Arabic", "Tahoma", "Arial Unicode MS", sans-serif;
+  direction: rtl;
+  text-align: right;
+  line-height: 1.9;
+  letter-spacing: 0.03em;
+  font-weight: 500;
+}
+
+/* Added theme toggle button styles */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 50px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+}
+
+.theme-toggle:hover {
+  background: var(--accent-primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.theme-toggle i {
+  font-size: 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--bg-secondary);
+  backdrop-filter: blur(10px);
+  z-index: 100;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rtl .header .container {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s;
+  cursor: pointer;
+  border: none;
+  font-size: 0.875rem;
+}
+
+.btn-outline {
+  border: 1px solid var(--accent-primary);
+  color: var(--accent-secondary);
+  background: var(--bg-secondary);
+}
+
+.btn-outline:hover {
+  background: var(--accent-primary);
+  color: white;
+  transform: translateY(-1px);
+}
+
+.btn i {
+  font-size: 1rem;
+}
+
+.rtl .btn {
+  flex-direction: row-reverse;
+  text-align: center;
+}
+
+/* Hero Section */
+.hero {
+  padding: 8rem 1rem 4rem;
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+/* Updated Arabic hero title to use Tajawal font */
+.hero h1.arabic {
+  font-family: "Tajawal", "Amiri", "Cairo", "Noto Sans Arabic", serif;
+  font-size: 2.8rem;
+  letter-spacing: 0.08em;
+  line-height: 1.3;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--text-accent);
+  margin-bottom: 1rem;
+}
+
+.hero-description {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+}
+
+/* Sections */
+.section {
+  padding: 4rem 1rem;
+}
+
+.bg-slate-800 {
+  background-color: var(--bg-secondary);
+}
+
+.bg-slate-900 {
+  background-color: var(--bg-primary);
+}
+
+.section-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+/* Updated Arabic section titles to use Tajawal font */
+.section-title.arabic {
+  font-family: "Tajawal", "Cairo", "Amiri", "Noto Sans Arabic", serif;
+  font-size: 2.2rem;
+  line-height: 1.3;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+/* Cards */
+.card {
+  background: var(--bg-card);
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-primary);
+  box-shadow: 0 10px 25px rgba(6, 182, 212, 0.1);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.rtl .card-header {
+  flex-direction: row-reverse;
+  text-align: right;
+  justify-content: flex-start;
+}
+
+.card-header h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Updated Arabic card titles to use Tajawal font */
+.card-header h3.arabic {
+  font-family: "Tajawal", "Cairo", "Amiri", "Noto Sans Arabic", serif;
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+.card-content {
+  color: var(--text-secondary);
+}
+
+.rtl .card-content {
+  text-align: right;
+  line-height: 1.8;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: #94a3b8;
+}
+
+.font-medium {
+  font-weight: 500;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+/* Icons */
+.icon {
+  color: var(--text-accent);
+  font-size: 1.5rem;
+}
+
+.icon-small {
+  color: var(--text-accent);
+  font-size: 1.25rem;
+  margin-right: 0.75rem;
+}
+
+.rtl .icon-small {
+  margin-right: 0;
+  margin-left: 0.75rem;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.skill-category {
+  background: var(--bg-card);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.skill-category h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Updated Arabic skill category titles to use Tajawal font */
+.skill-category h4.arabic {
+  font-family: "Tajawal", "Cairo", "Amiri", "Noto Sans Arabic", serif;
+  font-size: 1.2rem;
+}
+
+/* New Skills Section - Three Cards with Pill Tags */
+.grid {
+  display: grid;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.gap-6 {
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .md\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.skill-card-new {
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.skill-card-new:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15);
+}
+
+[data-theme="dark"] .skill-card-new:hover {
+  box-shadow: 0 4px 12px 0 rgba(16, 185, 129, 0.2);
+}
+
+.skill-card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+/* Light mode title color */
+.skill-card-title {
+  color: #0369a1;
+}
+
+/* Dark mode title color */
+[data-theme="dark"] .skill-card-title {
+  color: #10d9c4;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  margin: 0.125rem 0.5rem 0.125rem 0;
+}
+
+.skill-tag:hover {
+  transform: scale(1.05);
+}
+
+/* Light mode skill tags */
+.skill-tag {
+  background: rgba(148, 163, 184, 0.7);
+  color: #1e293b;
+}
+
+/* Dark mode skill tags */
+[data-theme="dark"] .skill-tag {
+  background: rgba(71, 85, 105, 0.7);
+  color: #e2e8f0;
+}
+
+/* Individual skill tag colors */
+.skill-tag-laravel {
+  background: #ef4444 !important;
+  color: white !important;
+}
+
+.skill-tag-php {
+  background: #8b5cf6 !important;
+  color: white !important;
+}
+
+.skill-tag-python {
+  background: #06b6d4 !important;
+  color: white !important;
+}
+
+.skill-tag-mysql {
+  background: #f59e0b !important;
+  color: white !important;
+}
+
+.skill-tag-js {
+  background: #10b981 !important;
+  color: white !important;
+}
+
+.skill-tag-html {
+  background: #3b82f6 !important;
+  color: white !important;
+}
+
+.skill-tag-wordpress {
+  background: #ec4899 !important;
+  color: white !important;
+}
+
+.skill-tag-honeypot {
+  background: #6366f1 !important;
+  color: white !important;
+}
+
+.skill-tag-git {
+  background: #84cc16 !important;
+  color: white !important;
+}
+
+.skill-tag-linux {
+  background: #f97316 !important;
+  color: white !important;
+}
+
+/* RTL Support for skill cards */
+[dir="rtl"] .skill-card-new {
+  text-align: right;
+}
+
+[dir="rtl"] .skill-tags {
+  justify-content: flex-end;
+}
+
+[dir="rtl"] .skill-tag {
+  margin: 0.125rem 0 0.125rem 0.5rem;
+}
+
+/* Arabic font for skill titles */
+.skill-card-title.arabic {
+  font-family: "Tajawal", "Cairo", "Amiri", "Noto Sans Arabic", serif;
+  font-size: 1.2rem;
+}
+
+/* Certifications Grid */
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.cert-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+}
+
+.cert-card:hover {
+  border-color: var(--accent-primary);
+  transform: translateY(-2px);
+}
+
+.cert-card h3 {
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  font-family: "Cairo", "Noto Sans Arabic", sans-serif;
+  line-height: 1.6;
+}
+
+/* Contact */
+.contact-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: var(--bg-card);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  border-color: var(--accent-primary);
+  transform: translateY(-2px);
+}
+
+.contact-item i {
+  font-size: 1.5rem;
+  color: var(--accent-primary);
+  width: 24px;
+  text-align: center;
+}
+
+.contact-item a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-item a:hover {
+  color: var(--accent-primary);
+}
+
+.location {
+  color: #64748b;
+  margin-top: 2rem;
+}
+
+.language-toggle {
+  position: relative;
+  overflow: hidden;
+}
+
+.language-toggle::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.language-toggle:hover::after {
+  left: 100%;
+}
+
+.rtl .contact-grid {
+  direction: rtl;
+}
+
+.rtl .contact-item {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+/* Date info styling */
+.date-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-accent);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .theme-toggle {
+    top: 10px;
+    right: 10px;
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero h1.arabic {
+    font-size: 1.8rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .contact-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 6rem 1rem 3rem;
+  }
+
+  .section {
+    padding: 3rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero h1.arabic {
+    font-size: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* Added specific Arabic text styling for better readability */
+.arabic {
+  font-family: "Tajawal", "Cairo", "Amiri", "Noto Sans Arabic", sans-serif;
+  line-height: 1.8;
+  letter-spacing: 0.02em;
+  word-spacing: 0.1em;
+}
+
+.arabic h2,
+.arabic h3 {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.arabic p,
+.arabic li {
+  font-weight: 400;
+  line-height: 1.9;
+}
