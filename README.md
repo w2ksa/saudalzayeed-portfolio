@@ -18,10 +18,7 @@ It showcases my skills, projects, and provides a way to contact me.
 - JavaScript
 - Next.js
 
-## 📸 Screenshots
-Here are some previews of the portfolio:
 
-![Homepage](public/images/saud-profile.jpg)
 
 ## 🔗 Live Demo
 👉 [saudalzayeed.com](https://saudalzayeed.com)
