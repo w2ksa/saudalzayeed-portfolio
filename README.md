@@ -1,19 +1,27 @@
 # Personal Portfolio Website 🌐
 
-This is my personal portfolio website built with **HTML, CSS, and JavaScript** (with Next.js components).  
+This is my personal portfolio website built with **HTML, CSS, and JavaScript** (using **Next.js** and **TailwindCSS**).  
 It showcases my skills, projects, and provides a way to contact me.
 
 ## 🚀 Features
-- Responsive design
+- Responsive design (mobile-first)
 - About me section
 - Projects showcase
 - Contact section
+- 🌙 Dark/Light mode toggle
+- 🌐 Multi-language support (English / Arabic)
+- 📄 Downloadable CV
 
 ## 🛠️ Tech Stack
 - HTML
-- CSS
+- CSS / TailwindCSS
 - JavaScript
 - Next.js
+
+## 📸 Screenshots
+Here are some previews of the portfolio:
+
+![Homepage](public/images/saud-profile.jpg)
 
 ## 🔗 Live Demo
 👉 [saudalzayeed.com](https://saudalzayeed.com)
